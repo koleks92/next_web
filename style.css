@@ -148,6 +148,12 @@ nav.active #burger_button {
 main {
   flex: 1;
 }
+section {
+  padding: 60px 5% 0;
+}
+section:nth-child(1) {
+  padding: 0;
+}
 
 #top {
   grid-template-columns: repeat(6, 1fr);
@@ -182,10 +188,6 @@ main {
   border-radius: 1px;
 }
 
-/* DELETE LATER, FOR TESTING */
-.section_div {
-  height: 500px;
-}
 
 /* FOOTER */
 footer {
@@ -201,5 +203,66 @@ footer p {
   color: var(--color-black);
 }
 
-footer img {
+
+/* lui standard */
+.higligt {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+.prime {
+  color: var(--color-primary);
+}
+p {
+  color: var(--color-secondary);
+}
+#grid {
+  display: grid;
+}
+
+
+
+/* lui section 1  */
+#salgs_points_4 {
+  background-color: var(--background);
+}
+.salgs_points {
+  margin: 0;
+  position: relative;
+  padding: 20px;
+  padding-left: 4rem;
+}
+.salgs_points .tal {
+  color: var(--color-accent);
+  position: absolute;
+  top: -0.8rem;
+  left: 0.8rem;
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+.salgs_points .over {
+  color: var(--color-primary);
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* lui section 2  */
+#img {
+  float: right;
+  width: 40%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  shape-outside: margin-box;
+}
+
+#faktabox h2 {
+  margin-top: 25px;
+  color: var(--color-primary);
+}
+li {
+    list-style-position: inside;
+    color: var(--color-secondary);
+    margin: 10px 0;
 }
