@@ -4,6 +4,7 @@
 
 /* COLORS */
 :root {
+  --color-black: #000000;
   --color-primary: #003b66;
   --color-secondary: #0d72a1;
   --color-accent: #b7d3e3;
@@ -188,4 +189,17 @@ main {
 
 /* FOOTER */
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50vh;
+  padding: 45px;
+  background-color: var(--color-background);
+}
+
+footer p {
+  color: var(--color-black);
+}
+
+footer img {
 }
