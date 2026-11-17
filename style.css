@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* MOBILE */
+
+/* COLORS */
+:root {
+  --color-primary: #003b66;
+  --color-secondary: #0d72a1;
+  --color-accent: #b7d3e3;
+  --color-neutral-light: #cdd0d5;
+  --color-background: #fffefa;
+}
+
+/* GENERAL */
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-accent);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 100px;
+}
+
+header.active {
+  position: fixed;
+  max-height: none;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #003b66;
+}
+
+#logo {
+  height: 45px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+}
+
+#logo.active {
+  display: none;
+}
+
+.fa-bars {
+  font-size: 3rem;
+  color: var(--color-accent);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  max-height: 100px;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem;
+}
+
+nav.active {
+  max-height: none;
+  height: 100vh;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0;
+}
+
+nav.active #burger_button {
+  align-self: flex-end;
+}
+
+#nav_links {
+  display: none;
+}
+
+#nav_links.active {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+/* PROGRESS BAR */
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: var(--color-accent);
+}
+
+.progress-container.active {
+  display: none;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: var(--color-accent);
+  width: 0%;
+}
+
+/* MAIN */
+main {
+  flex: 1;
+}
+
+#top {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  display: grid;
+  height: 100vh;
+}
+
+#top_img {
+  grid-area: 1 / 1 / -1 / -1;
+  height: 100%;
+  object-fit: cover;
+}
+
+#top_links {
+  grid-column: 2 / 5;
+  grid-row: 3 / -1;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+
+}
+
+.top_link {
+  background-color: var(--color-secondary);
+  padding: 0.5rem;
+}
+
+/* DELETE LATER, FOR TESTING */
+.section_div {
+  height: 500px;
+}
+
+/* FOOTER */
+footer {
+/* */
