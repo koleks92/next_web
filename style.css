@@ -23,7 +23,6 @@ html {
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  color: var(--color-accent);
 }
 
 img {
@@ -33,6 +32,7 @@ img {
 
 a {
   text-decoration: none;
+  color: var(--color-background);
 }
 
 #wrapper {
@@ -40,6 +40,29 @@ a {
   flex-direction: column;
   min-height: 100vh;
   margin: 0 auto;
+  color: var(--color-primary);
+}
+
+.white {
+  background-color: var(--color-background);
+}
+
+.blue {
+  background-color: var(--color-accent);
+}
+
+.higligt {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+.prime {
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+p {
+  color: var(--color-primary);
 }
 
 /* HEADER */
@@ -123,6 +146,7 @@ nav.active #burger_button {
   justify-content: center;
   gap: 1rem;
   font-size: 2rem;
+  color: var(--color-accent);
 }
 
 /* PROGRESS BAR */
@@ -140,7 +164,7 @@ nav.active #burger_button {
 /* The progress bar (scroll indicator) */
 .progress-bar {
   height: 8px;
-  background: var(--color-accent);
+  background: var(--color-secondary);
   width: 0%;
 }
 
@@ -149,12 +173,13 @@ main {
   flex: 1;
 }
 section {
-  padding: 60px 5% 0;
+  padding: 40px 25px;
 }
 section:nth-child(1) {
   padding: 0;
 }
 
+/* TOP */
 #top {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -188,43 +213,13 @@ section:nth-child(1) {
   border-radius: 1px;
 }
 
-
-/* FOOTER */
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 50vh;
-  padding: 45px;
-  background-color: var(--color-background);
+/* SECTIONS */
+.section_div img {
+  border-radius: 2px;
 }
 
-footer p {
-  color: var(--color-black);
-}
+/* Section 1 / Salgs Points */
 
-
-.higligt {
-  color: var(--color-secondary);
-  font-weight: 700;
-}
-.prime {
-  margin-bottom: 15px;
-  color: var(--color-primary);
-}
-p {
-  color: var(--color-secondary);
-}
-#grid {
-  display: grid;
-}
-
-
-
-/* lui section 1  */
-#salgs_points_4 {
-  background-color: var(--background);
-}
 .salgs_points {
   margin: 0;
   position: relative;
@@ -246,14 +241,14 @@ p {
   z-index: 1;
 }
 
+/* Section 2 / Om uddannelsen*/
 
-
-/* lui section 2  */
-#img {
-  padding: 5px;
+#om_uddanelsen_div img {
+  padding-right: 10px;
   float: left;
   width: 50%;
   aspect-ratio: 1;
+  border-radius: 2px;
   object-fit: cover;
   shape-outside: margin-box;
 }
@@ -262,8 +257,93 @@ p {
   margin-top: 25px;
   color: var(--color-primary);
 }
-li {
-    list-style-position: inside;
-    color: var(--color-secondary);
-    margin: 10px 0;
+
+#faktabox ul {
+  list-style-position: inside;
+}
+
+#faktabox li {
+  margin: 10px 0;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+#timelinje {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Section 3 / Din nyes start */
+#section3 article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Section 4 / Students */
+#students {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.student {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.student img {
+  grid-column: 1 / 3;
+  height: 100%;
+  object-fit: cover;
+}
+
+.student div {
+  grid-column: 3 / -1;
+}
+
+.student div h3 {
+  color: var(--color-primary);
+}
+
+/* Section 5/6 / Om os / Faggoreninger*/
+#section5 article,
+#section6 article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#section6 ul {
+  list-style-position: inside;
+}
+
+#section6 li {
+  color: var(--color-primary);
+}
+
+#section6 ul:first-child {
+  margin-top: 0;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50vh;
+  padding: 40px 25px;
+  background-color: var(--color-background);
+}
+
+footer p {
+  color: var(--color-primary);
+}
+
+
+/* EXTRA STYLE FOR BURGER BUTTON */
+.darkButton,
+.darkButton * {
+  fill: var(--color-primary);
 }

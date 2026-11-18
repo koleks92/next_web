@@ -27,20 +27,23 @@ function toogleBurger() {
 }
 // When the user scrolls the page, execute myFunction
 window.onscroll = function () {
-  myFunction();
+  hideLogo();
 };
 
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height =
+function hideLogo() {
+  let burgerButton = button.querySelector("svg");
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
+  let scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
-
+  console.log(burgerButton);
   if (scrolled >= 10) {
     logo.classList.add("hide");
+    burgerButton.classList.add("darkButton");
   } else {
     logo.classList.remove("hide");
+    burgerButton.classList.remove("darkButton");
   }
 }
