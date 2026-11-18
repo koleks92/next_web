@@ -65,6 +65,30 @@ p {
   color: var(--color-primary);
 }
 
+/* SIGN UP ICON */
+#signup_div {
+  display: grid;
+  grid-column: 1fr 1fr;
+  grid-row: 1fr;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+#signup_div svg {
+  grid-column: 1 / 2;
+  font-size: 3rem;
+  color: var(--color-accent);
+}
+
+#signup_div p {
+  font-weight: bold;
+  align-self: center;
+  grid-column: 2 / 2;
+  width: min-content;
+  color: var(--color-accent);
+}
+
 /* HEADER */
 header {
   position: fixed;
@@ -89,7 +113,7 @@ header.active {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: #003b66;
+  background-color: var(--color-secondary);
 }
 
 #logo {
@@ -150,11 +174,10 @@ nav.active #burger_button {
 }
 
 /* PROGRESS BAR */
-/* The progress container (grey background) */
+/* The progress container */
 .progress-container {
   width: 100%;
   height: 8px;
-  background: var(--color-accent);
 }
 
 .progress-container.active {
@@ -184,7 +207,7 @@ section:nth-child(1) {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
   display: grid;
-  height: 100vh;
+  height: 101vh;
 }
 
 #top_img {
@@ -196,10 +219,10 @@ section:nth-child(1) {
 #top_links {
   grid-column: 2/6;
   grid-row: 3 / -1;
-  align-self: center;
-
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
   gap: 0.5rem;
 }
 
@@ -210,7 +233,24 @@ section:nth-child(1) {
   font-weight: bold;
   font-size: 1.1rem;
   justify-content: center;
-  border-radius: 1px;
+  border-radius: 4px;
+}
+
+.top_link a {
+  color: var(--color-accent)
+}
+
+#arrow_down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#arrow_down * {
+  position: relative;
+  fill: var(--color-accent) !important;
+  font-size: 4rem;
+
 }
 
 /* SECTIONS */
@@ -341,9 +381,25 @@ footer p {
   color: var(--color-primary);
 }
 
-
 /* EXTRA STYLE FOR BURGER BUTTON */
 .darkButton,
 .darkButton * {
-  fill: var(--color-primary);
+  fill: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+
+}
+
+/* ANIMATION */
+
+#arrow_down svg {
+  animation: MoveUpDown 0.8s ease-in-out infinite;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
 }

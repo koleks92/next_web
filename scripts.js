@@ -18,6 +18,7 @@ button.addEventListener("click", (event) => {
   toogleBurger();
 });
 
+// Toggle burger menu
 function toogleBurger() {
   header.classList.toggle("active");
   nav.classList.toggle("active");
@@ -25,13 +26,16 @@ function toogleBurger() {
   logo.classList.toggle("active");
   progressBar.classList.toggle("active");
 }
-// When the user scrolls the page, execute myFunction
+
+// When the user scrolls the page, execute hideLogo
 window.onscroll = function () {
   hideLogo();
 };
 
+// Hide logo, change colors
 function hideLogo() {
-  let burgerButton = button.querySelector("svg");
+  const burgerButton = button.querySelector("svg");
+  const ansøgButton = document.querySelector("#signup_div");
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   let height =
     document.documentElement.scrollHeight -
@@ -39,6 +43,8 @@ function hideLogo() {
   let scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
   console.log(burgerButton);
+
+  // Hide logo, change burger color
   if (scrolled >= 10) {
     logo.classList.add("hide");
     burgerButton.classList.add("darkButton");
@@ -46,4 +52,13 @@ function hideLogo() {
     logo.classList.remove("hide");
     burgerButton.classList.remove("darkButton");
   }
-}
+
+  // Change ansøg button color
+  if (scrolled >= 2) {
+    ansøgButton.classList.add("darkButton");
+  } else {
+    ansøgButton.classList.remove("darkButton");
+  }
+} 
+
+
