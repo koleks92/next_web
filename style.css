@@ -204,7 +204,6 @@ footer p {
 }
 
 
-/* lui standard */
 .higligt {
   color: var(--color-secondary);
   font-weight: 700;
@@ -268,5 +267,3 @@ li {
     color: var(--color-secondary);
     margin: 10px 0;
 }
-
-
