@@ -210,6 +210,7 @@ footer p {
   font-weight: 700;
 }
 .prime {
+  margin-bottom: 15px;
   color: var(--color-primary);
 }
 p {
@@ -250,8 +251,9 @@ p {
 
 /* lui section 2  */
 #img {
-  float: right;
-  width: 40%;
+  padding: 5px;
+  float: left;
+  width: 50%;
   aspect-ratio: 1;
   object-fit: cover;
   shape-outside: margin-box;
@@ -266,3 +268,5 @@ li {
     color: var(--color-secondary);
     margin: 10px 0;
 }
+
+
