@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js" defer></script>
+    <script src="singup.js" defer></script>
+    <script src="https://kit.fontawesome.com/01ed1881ad.js" crossorigin="anonymous"></script>
+    <title>Ansøgning</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+            <nav>
+                <a href="index.html">
+                    <img id="logo" src="images/logo_a.png" alt="Logo" />
+                </a>
+                <div id="burger_button" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div id="nav_links">
+                    <a href="#top">Start</a>
+                    <a href="#section1">Hvorfor</a>
+                    <a href="#section2">Om uddannelsen</a>
+                    <a href="#section3">Nyt start</a>
+                    <a href="#section4">Fra studerende</a>
+                    <a href="#section5">Om os</a>
+                    <a href="#section6">Fagforening</a>
+                    <a href="#footer">Kontakt</a>
+                </div>
+            </nav>
+        </header>
+
+        <main id="ansøgning">
+            <ol class="progress" id="progress"></ol>
+
+            <form id="form" class="card" novalidate>
+
+                <section class="step" data-title="Oplysninger">
+                    <div>
+                    <h2>Personlige oplysninger</h2>
+                    <p class="hint">Så vi ved, hvem du er, og hvordan vi kontakter dig.</p>
+                    </div>
+                    
+
+                    <label for="name">navn</label>
+                    <input id="name" name="name" autocomplete="name" required>
+                    <p class="error"></p>
+
+                    <label for="name">efter navn</label>
+                    <input id="name" name="name" autocomplete="name" required>
+                    <p class="error"></p>
+
+                    <label for="phone">Telefon</label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9 +]{8,15}">
+                    <p class="error"></p>
+
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                    <p class="error"></p>
+
+                    <label for="name">Bekræft E-mail</label>
+                    <input id="name" name="name" autocomplete="name" required>
+                    <p class="error"></p>
+
+                    <label for="name">vej og nr</label>
+                    <input id="name" name="name" autocomplete="name" required>
+                    <p class="error"></p>
+
+                    <label for="name">post nr</label>
+                    <input id="name" name="name" autocomplete="name" required>
+                    <p class="error"></p>
+
+                    <label for="name">by</label>
+                    <input id="name" name="name" autocomplete="name" required>
+                    <p class="error"></p>
+
+                    <label for="name">land</label>
+                    <input id="name" name="name" autocomplete="name" required>
+                    <p class="error"></p>
+        
+
+                </section>
+
+                <section class="step" data-title="CV og tekst">
+                    <h2>CV og ansøgningstekst</h2>
+                    <p class="hint">Upload dit CV som PDF eller Word (maks. 5 MB).</p>
+                    <label for="cv">CV</label>
+                    <input id="cv" name="cv" type="file" accept=".pdf,.doc,.docx" required>
+                    <p class="error"></p>
+                    <label for="letter">Hvorfor vil du have jobbet?</label>
+                    <textarea id="letter" name="letter" minlength="50" maxlength="2000" required></textarea>
+                    <div class="count"><span id="count">0</span> / 2000 tegn</div>
+                    <p class="error"></p>
+                </section>
+
+                <section class="step" data-title="Bekræft">
+                    <h2>Bekræft det, du har skrevet</h2>
+                    <p class="hint">Tjek at alt er rigtigt, før du sender.</p>
+                    <dl id="summary"></dl>
+                </section>
+
+                <section class="step" data-title="Tak">
+                    <div class="thanks">
+                        <div class="check" aria-hidden="true">✓</div>
+                        <h2>Tak for din ansøgning</h2>
+                        <p class="hint">Vi har modtaget den og vender tilbage hurtigst muligt.</p>
+                    </div>
+                </section>
+
+                <div class="actions" id="actions">
+                    <button type="button" class="secondary" id="back">Tilbage</button>
+                    <button type="button" class="primary" id="next">Næste</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>
