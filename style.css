@@ -474,7 +474,7 @@ form {
 label {
   font-weight: 700;
   color: var(--color-primary);
-  margin: 16px 0 6px;
+  margin: 0px 0 0px;
   width: 150px;
 }
 
@@ -490,7 +490,7 @@ textarea {
 
 .row {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
 }
 
 input[type="file"] {
