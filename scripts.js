@@ -10,7 +10,10 @@ const links = document.querySelectorAll("#nav_links a");
 
 links.forEach((l) => {
   l.addEventListener("click", () => {
-    toogleBurger();
+    // ivan changed: on desktop the menu is never open, so only close it if it is
+    if (header.classList.contains("active")) {
+      toogleBurger();
+    }
   });
 });
 
