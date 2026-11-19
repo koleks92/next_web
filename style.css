@@ -278,14 +278,33 @@ section:nth-child(1) {
 
 /* Section 2 / Om uddannelsen*/
 
+#om_uddanelsen_div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
 #om_uddanelsen_div img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  object-position: center;
   padding-right: 10px;
   float: left;
-  width: 50%;
+  height: 100%;
   aspect-ratio: 1;
   border-radius: 2px;
   object-fit: cover;
   shape-outside: margin-box;
+}
+
+#om_uddanelsen_div p {
+  grid-column: 2 / -1;
+  grid-row: 1 / 3;
+}
+
+#faktabox {
+  grid-column: 1 / -1;
+  grid-row: 3 / -1;
 }
 
 #faktabox h2 {
@@ -361,10 +380,6 @@ section:nth-child(1) {
 #section6 ul:first-child {
   margin-top: 0;
 }
-
-
-
-
 
 /* FOOTER */
 footer {
@@ -622,4 +637,185 @@ dd {
 
 .student div h3 {
   color: var(--color-primary);
+}
+
+/* TABLET - ivan changed */
+@media (min-width: 768px) {
+  section {
+    padding: 80px 8% 80px;
+  }
+
+  #top_links {
+    grid-column: 3 / 5;
+  }
+
+  .top_link {
+    text-align: center;
+  }
+
+  #section1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  #om_uddanelsen_div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  #om_uddanelsen_div img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  #timelinje {
+    max-width: 700px;
+    margin: 2rem auto 0;
+  }
+
+  #students {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  /* same 5 column split the mobile .student img / div rules are built for */
+  .student {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .student img {
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .student div h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    height: auto;
+    gap: 1rem;
+    padding: 60px 8%;
+  }
+
+  footer img {
+    max-width: 400px;
+    margin-bottom: 1rem;
+  }
+
+  #ansøgning {
+    width: 100%;
+    max-width: 650px;
+    margin: 120px auto 60px;
+  }
+}
+
+/* DESKTOP - ivan changed */
+@media (min-width: 1024px) {
+  header {
+    background-color: var(--color-primary);
+    align-items: center;
+  }
+
+  #progress-container {
+    display: none;
+  }
+
+  #burger_button {
+    display: none;
+  }
+
+  /* the scroll script fades the logo out, but on desktop the header has a background so it can stay */
+  #logo.hide {
+    opacity: 1;
+  }
+
+  nav {
+    max-width: 1200px;
+    padding: 0.8rem 2rem;
+  }
+
+  #nav_links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  #nav_links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  #nav_links a:hover {
+    color: #fff;
+  }
+
+  section {
+    padding: 100px max(5%, calc((100% - 1100px) / 2)) 100px;
+  }
+
+  #section1 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #om_uddanelsen_div {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #om_uddanelsen_div p {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+  }
+
+  #faktabox {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+  }
+
+  #section3 article,
+  #section5 article,
+  #section6 article {
+    max-width: 75ch;
+  }
+
+  #students {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .student {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  #timelinje {
+    max-width: 900px;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+    padding: 80px max(5%, calc((100% - 1100px) / 2));
+  }
+
+  footer img {
+    grid-row: 1 / 6;
+    align-self: center;
+  }
+
+  #signup_div {
+    bottom: 2rem;
+    right: 2rem;
+  }
 }
