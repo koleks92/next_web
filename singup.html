@@ -43,48 +43,62 @@
             <form id="form" class="card" novalidate>
 
                 <section class="step" data-title="Oplysninger">
-                    <div>
+
                     <h2>Personlige oplysninger</h2>
-                    <p class="hint">Så vi ved, hvem du er, og hvordan vi kontakter dig.</p>
+
+                    <div class="row">
+                        <label for="name">navn</label>
+                        <input id="name" name="name" autocomplete="name" required>
+                        <p class="error"></p>
+                    </div>
+
+                    <div class="row">
+                        <label for="name">efter navn</label>
+                        <input id="name" name="name" autocomplete="name" required>
+                        <p class="error"></p>
+                    </div>
+
+                    <div class="row">
+                        <label for="phone">Telefon</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9 +]{8,15}">
+                        <p class="error"></p>
+                    </div>
+
+                    <div class="row">
+                        <label for="email1">E-mail</label>
+                        <input id="email" name="email1" type="email" autocomplete="email" required>
+                        <p class="error"></p>
+                    </div>
+
+                    <div class="row"> 
+                        <label for="email2">Bekræft E-mail</label>
+                        <input id="email2" name="email2" type="email" autocomplete="name" required>
+                        <p class="error"></p>
                     </div>
                     
+                    <div class="row">
+                        <label for="name">vej og nr</label>
+                        <input id="name" name="name" autocomplete="name" required>
+                        <p class="error"></p>
+                    </div>
 
-                    <label for="name">navn</label>
-                    <input id="name" name="name" autocomplete="name" required>
-                    <p class="error"></p>
+                    <div class="row">
+                        <label for="name">post nr</label>
+                        <input id="name" name="name" autocomplete="name" required>
+                        <p class="error"></p>
+                    </div>
 
-                    <label for="name">efter navn</label>
-                    <input id="name" name="name" autocomplete="name" required>
-                    <p class="error"></p>
+                    <div class="row">
+                        <label for="name">by</label>
+                        <input id="name" name="name" autocomplete="name" required>
+                        <p class="error"></p>
+                    </div>
 
-                    <label for="phone">Telefon</label>
-                    <input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9 +]{8,15}">
-                    <p class="error"></p>
-
-                    <label for="email">E-mail</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required>
-                    <p class="error"></p>
-
-                    <label for="name">Bekræft E-mail</label>
-                    <input id="name" name="name" autocomplete="name" required>
-                    <p class="error"></p>
-
-                    <label for="name">vej og nr</label>
-                    <input id="name" name="name" autocomplete="name" required>
-                    <p class="error"></p>
-
-                    <label for="name">post nr</label>
-                    <input id="name" name="name" autocomplete="name" required>
-                    <p class="error"></p>
-
-                    <label for="name">by</label>
-                    <input id="name" name="name" autocomplete="name" required>
-                    <p class="error"></p>
-
-                    <label for="name">land</label>
-                    <input id="name" name="name" autocomplete="name" required>
-                    <p class="error"></p>
-        
+                    <div class="row"> 
+                        <label for="name">land</label>
+                        <input id="name" name="name" autocomplete="name" required>
+                        <p class="error"></p>
+                    </div>
 
                 </section>
 
