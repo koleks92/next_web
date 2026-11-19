@@ -4,6 +4,7 @@
 
 /* COLORS */
 :root {
+  --color-black: #000000;
   --color-primary: #003b66;
   --color-secondary: #0d72a1;
   --color-accent: #b7d3e3;
@@ -32,6 +33,7 @@ img {
 
 a {
   text-decoration: none;
+  color: var(--color-background);
 }
 
 #wrapper {
@@ -39,6 +41,29 @@ a {
   flex-direction: column;
   min-height: 100vh;
   margin: 0 auto;
+  color: var(--color-primary);
+}
+
+.white {
+  background-color: var(--color-background);
+}
+
+.blue {
+  background-color: var(--color-accent);
+}
+
+.higligt {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+.prime {
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+p {
+  color: var(--color-primary);
 }
 
 /* SIGN UP ICON */
@@ -172,13 +197,14 @@ main {
 }
 
 section {
-  padding: 60px 5% 0;
+  padding: 40px 25px;
 }
 
 section:nth-child(1) {
   padding: 0;
 }
 
+/* TOP */
 #top {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -193,7 +219,7 @@ section:nth-child(1) {
 }
 
 #top_links {
-  grid-column: 2 / 5;
+  grid-column: 2 / 6;
   grid-row: 3 / -1;
   display: flex;
   flex-direction: column;
@@ -212,7 +238,7 @@ section:nth-child(1) {
 }
 
 .top_link a {
-  color: var(--color-accent)
+  color: var(--color-accent);
 }
 
 #arrow_down {
@@ -225,51 +251,9 @@ section:nth-child(1) {
   position: relative;
   fill: var(--color-accent) !important;
   font-size: 4rem;
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* lui standard */
-.higligt {
-  color: var(--color-secondary);
-  font-weight: 700;
-}
-
-.prime {
-  margin-bottom: 15px;
-  color: var(--color-primary);
-}
-
-p {
-  color: var(--color-secondary);
-}
-
-#grid {
-  display: grid;
-}
-
-#ansøgning {
-  margin-top: 100px;
-}
-
-
-
-/* lui section 1  */
-#salgs_points_4 {
-  background-color: var(--background);
-}
+/* Section 1 / Salgs Points */
 
 .salgs_points {
   margin: 0;
@@ -277,7 +261,6 @@ p {
   padding: 20px;
   padding-left: 4rem;
 }
-
 .salgs_points .tal {
   color: var(--color-accent);
   position: absolute;
@@ -287,21 +270,20 @@ p {
   font-size: 3.5rem;
   line-height: 1;
 }
-
 .salgs_points .over {
   color: var(--color-primary);
   position: relative;
   z-index: 1;
 }
 
+/* Section 2 / Om uddannelsen*/
 
-
-/* lui section 2  */
-#img {
-  padding: 5px;
+#om_uddanelsen_div img {
+  padding-right: 10px;
   float: left;
   width: 50%;
   aspect-ratio: 1;
+  border-radius: 2px;
   object-fit: cover;
   shape-outside: margin-box;
 }
@@ -311,25 +293,121 @@ p {
   color: var(--color-primary);
 }
 
-li {
+#faktabox ul {
   list-style-position: inside;
-  color: var(--color-secondary);
+}
+
+#faktabox li {
   margin: 10px 0;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+#timelinje {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Section 3 / Din nyes start */
+#section3 article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Section 4 / Students */
+#students {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.student {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.student img {
+  grid-column: 1 / 3;
+  height: 100%;
+  object-fit: cover;
+}
+
+.student div {
+  grid-column: 3 / -1;
+}
+
+.student div h3 {
+  color: var(--color-primary);
+}
+
+/* Section 5/6 / Om os / Faggoreninger*/
+#section5 article,
+#section6 article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#section6 ul {
+  list-style-position: inside;
+}
+
+#section6 li {
+  color: var(--color-primary);
+}
+
+#section6 ul:first-child {
+  margin-top: 0;
 }
 
 
 
 
 
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50vh;
+  padding: 40px 25px;
+  background-color: var(--color-background);
+}
 
+footer p {
+  color: var(--color-primary);
+}
 
+/* EXTRA STYLE FOR BURGER BUTTON */
+.darkButton,
+.darkButton * {
+  fill: var(--color-primary) !important;
+  color: var(--color-primary) !important;
+}
 
+/* ANIMATION */
 
+#arrow_down svg {
+  animation: MoveUpDown 0.8s ease-in-out infinite;
+}
 
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
 
-/* ansøning skema lui */
+/* Ansøgning */
+#ansøgning {
+  margin-top: 100px;
+}
 
-/* ANSØGNINGSSKEMA */
 .hint {
   color: var(--muted);
   margin: 0 0 20px;
@@ -341,10 +419,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-
-
-
-
 .progress {
   display: flex;
   gap: 6px;
@@ -355,7 +429,7 @@ h2 {
 
 .progress li {
   flex: 1;
-  font-size: .85rem;
+  font-size: 0.85rem;
   color: var(--muted);
   list-style: none;
   margin: 0;
@@ -384,10 +458,6 @@ h2 {
   font-weight: 600;
 }
 
-
-
-
-
 form {
   padding: 24px;
 }
@@ -400,9 +470,6 @@ form {
 .step.active {
   display: block;
 }
-
-
-
 
 label {
   font-weight: 700;
@@ -451,14 +518,14 @@ textarea.invalid {
 
 .error {
   color: var(--error);
-  font-size: .9rem;
+  font-size: 0.9rem;
   min-height: 1.2em;
   margin: 4px 0 0;
 }
 
 .count {
   color: var(--muted);
-  font-size: .85rem;
+  font-size: 0.85rem;
   text-align: right;
 }
 
@@ -473,8 +540,6 @@ textarea.invalid {
   margin-top: 24px;
 }
 
-
-
 button {
   font: inherit;
   font-weight: 600;
@@ -482,7 +547,9 @@ button {
   border-radius: 6px;
   border: 1px solid var(--color-secondary);
   cursor: pointer;
-  transition: background-color .15s, color .15s;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
 }
 
 .primary {
@@ -506,7 +573,7 @@ button {
 }
 
 button:disabled {
-  opacity: .6;
+  opacity: 0.6;
   cursor: default;
 }
 
@@ -516,7 +583,7 @@ dl {
 
 dt {
   color: var(--muted);
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-top: 14px;
 }
 
@@ -555,61 +622,4 @@ dd {
 
 .student div h3 {
   color: var(--color-primary);
-}
-
-/* Section 5/6 / Om os / Faggoreninger*/
-#section5 article,
-#section6 article {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-#section6 ul {
-  list-style-position: inside;
-}
-
-#section6 li {
-  color: var(--color-primary);
-}
-
-#section6 ul:first-child {
-  margin-top: 0;
-}
-
-/* FOOTER */
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 50vh;
-  padding: 40px 25px;
-  background-color: var(--color-background);
-}
-
-footer p {
-  color: var(--color-primary);
-}
-
-/* EXTRA STYLE FOR BURGER BUTTON */
-.darkButton,
-.darkButton * {
-  fill: var(--color-primary) !important;
-    color: var(--color-primary) !important;
-
-}
-
-/* ANIMATION */
-
-#arrow_down svg {
-  animation: MoveUpDown 0.8s ease-in-out infinite;
-}
-
-@keyframes MoveUpDown {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(4px);
-  }
 }
