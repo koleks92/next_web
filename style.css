@@ -745,6 +745,7 @@ dd {
   #nav_links {
     display: flex;
     gap: 1.5rem;
+    
   }
 
   #nav_links a {
@@ -755,6 +756,10 @@ dd {
 
   #nav_links a:hover {
     color: #fff;
+  }
+
+  .top_link {
+    opacity: 0;
   }
 
   section {
