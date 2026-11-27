@@ -3,7 +3,8 @@ const header = document.querySelector("header");
 const nav = document.querySelector("nav");
 const nav_links = document.querySelector("#nav_links");
 const logo = document.querySelector("header img");
-const progressBar = document.querySelector("#progress-container");
+const progressBarContainer = document.querySelector("#progress-container");
+const progressBar = document.querySelector(".progress-bar");
 const button = document.querySelector("#burger_button");
 
 const links = document.querySelectorAll("#nav_links a");
@@ -27,7 +28,7 @@ function toogleBurger() {
   nav.classList.toggle("active");
   nav_links.classList.toggle("active");
   logo.classList.toggle("active");
-  progressBar.classList.toggle("active");
+  progressBarContainer.classList.toggle("active");
 }
 
 // When the user scrolls the page, execute hideLogo
@@ -47,13 +48,15 @@ function hideLogo() {
   document.getElementById("myBar").style.width = scrolled + "%";
   console.log(burgerButton);
 
-  // Hide logo, change burger color
+  // Hide logo, change burger color, change progressbar color
   if (scrolled >= 10) {
     logo.classList.add("hide");
     burgerButton.classList.add("darkButton");
+    progressBar.style.background = "var(--color-primary)";
   } else {
     logo.classList.remove("hide");
     burgerButton.classList.remove("darkButton");
+    progressBar.style.background = "var(--color-accent)";
   }
 
   // Change ansøg button color
@@ -62,6 +65,4 @@ function hideLogo() {
   } else {
     ansøgButton.classList.remove("darkButton");
   }
-} 
-
-
+}

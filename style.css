@@ -188,7 +188,7 @@ nav.active #burger_button {
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  height: 8px;
+  height: 6px;
   background: var(--color-accent);
   width: 0%;
 }
