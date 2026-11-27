@@ -69,8 +69,6 @@ p {
 /* SIGN UP ICON */
 #signup_div {
   display: grid;
-  grid-column: 1fr 1fr;
-  grid-row: 1fr;
   position: fixed;
   bottom: 1rem;
   right: 1rem;
@@ -235,7 +233,6 @@ section:nth-child(1) {
   font-size: 1.1rem;
   justify-content: center;
   border-radius: 4px;
-  text-align: center;
 }
 
 .top_link a {
@@ -295,7 +292,6 @@ section:nth-child(1) {
   aspect-ratio: 1;
   border-radius: 2px;
   object-fit: cover;
-  shape-outside: margin-box;
 }
 
 #om_uddanelsen_div p {
@@ -823,5 +819,11 @@ dd {
   #signup_div {
     bottom: 2rem;
     right: 2rem;
-  }
+  }  
+}
+
+/* HIDDEN */
+/* For validator */
+.hidden {
+  display: none;
 }
