@@ -72,11 +72,13 @@ p {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
+  opacity: 0.9;
 }
+
 
 #signup_div svg {
   grid-column: 1 / 2;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--color-accent);
 }
 
@@ -86,6 +88,8 @@ p {
   grid-column: 2 / 2;
   width: min-content;
   color: var(--color-accent);
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 /* HEADER */
@@ -233,6 +237,7 @@ section:nth-child(1) {
   font-size: 1.1rem;
   justify-content: center;
   border-radius: 4px;
+  text-align: center;
 }
 
 .top_link a {
@@ -279,12 +284,12 @@ section:nth-child(1) {
 #om_uddanelsen_div {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 #om_uddanelsen_div img {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
   object-position: center;
   padding-right: 10px;
   float: left;
@@ -292,16 +297,18 @@ section:nth-child(1) {
   aspect-ratio: 1;
   border-radius: 2px;
   object-fit: cover;
+
 }
 
 #om_uddanelsen_div p {
-  grid-column: 2 / -1;
-  grid-row: 1 / 3;
+  margin-top: 1rem;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
 }
 
 #faktabox {
   grid-column: 1 / -1;
-  grid-row: 3 / -1;
+  grid-row: 3 / 4;
 }
 
 #faktabox h2 {
@@ -384,12 +391,13 @@ footer {
   flex-direction: column;
   justify-content: space-around;
   height: 50vh;
-  padding: 40px 25px;
+  padding: 1rem 25px;
   background-color: var(--color-background);
 }
 
 footer p {
   color: var(--color-primary);
+  margin: 0.5rem 0;
 }
 
 /* EXTRA STYLE FOR BURGER BUTTON */
@@ -657,8 +665,7 @@ dd {
   }
 
   #om_uddanelsen_div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 2rem;
     align-items: center;
   }
@@ -666,6 +673,13 @@ dd {
   #om_uddanelsen_div img {
     width: 100%;
     object-fit: cover;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  #om_uddanelsen_div p {
+    grid-column: 2 / -1;
+    grid-row: 1 / 3;
   }
 
   #timelinje {
@@ -742,7 +756,6 @@ dd {
   #nav_links {
     display: flex;
     gap: 1.5rem;
-    
   }
 
   #nav_links a {
@@ -819,7 +832,7 @@ dd {
   #signup_div {
     bottom: 2rem;
     right: 2rem;
-  }  
+  }
 }
 
 /* HIDDEN */
